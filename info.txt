@@ -1,3 +1,5 @@
+УРОК 1 https://www.youtube.com/watch?v=7jcuIEwodpg
+
 1. Устанавливаем библиотеку:
 python3 -m pip install pygame
 
@@ -11,5 +13,12 @@ python3 -m pip install pygame
 
 6. Создаем движение игрока
 
-УРОК 1 https://www.youtube.com/watch?v=7jcuIEwodpg
+УРОК 2 https://www.youtube.com/watch?v=C3zZsmTF_QA
+
+7. Добавляем random
+
+8. Добавляем управление играком кнопками
+
+9. Добавляем противников
+
 
