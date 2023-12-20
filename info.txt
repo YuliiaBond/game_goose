@@ -21,4 +21,12 @@ python3 -m pip install pygame
 
 9. Добавляем противников
 
+10. Бонусы https://www.youtube.com/watch?v=qNpu_ga93tc
+
+УРОК 3 https://www.youtube.com/watch?v=INZWL1m10RU
+
+11. Определение столкновения играка с противником и бонусами
+
+12. 
+
 
