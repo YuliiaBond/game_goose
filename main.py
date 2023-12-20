@@ -37,7 +37,7 @@ player_move_left = [-4, 0]
 
 
 def create_enemy():
-    enemy_size = (100, 50)
+    enemy_size = (120, 50)
     # enemy = pygame.Surface(enemy_size)
     enemy = pygame.transform.scale(pygame.image.load(
         'enemy.png'), enemy_size)
@@ -54,7 +54,7 @@ enemies = []
 
 
 def create_bonus():
-    bonus_size = (70, 100)
+    bonus_size = (80, 110)
     # bonus = pygame.Surface(bonus_size)
     bonus = pygame.transform.scale(pygame.image.load(
         'bonus.png'), bonus_size)
@@ -67,9 +67,14 @@ def create_bonus():
 CREATE_BONUS = pygame.USEREVENT + 2
 pygame.time.set_timer(CREATE_BONUS, 3000)
 
+CHANGE_IMAGE = pygame.USEREVENT + 3
+pygame.time.set_timer(CHANGE_IMAGE, 1500)
+
 bonuses = []
 
 score = 0
+
+image_index = 0
 
 playing = True
 
@@ -83,6 +88,12 @@ while playing:
             enemies.append(create_enemy())
         if event.type == CREATE_BONUS:
             bonuses.append(create_bonus())
+        if event.type == CHANGE_IMAGE:
+            player = pygame.image.load(os.path.join(
+                IMAGE_PATH, PLAYER_IMAGES[image_index]))
+            image_index += 1
+            if image_index >= len(PLAYER_IMAGES):
+                image_index = 0
 
     # main_display.fill(COLOR_BLACK)
 
@@ -94,6 +105,9 @@ while playing:
 
     if bg_X2 < -bg.get_width():
         bg_X2 = bg.get_width()
+
+    IMAGE_PATH = "goose"
+    PLAYER_IMAGES = os.listdir(IMAGE_PATH)
 
     main_display.blit(bg, (bg_X1, 0))
     main_display.blit(bg, (bg_X2, 0))
