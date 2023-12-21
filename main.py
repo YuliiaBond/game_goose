@@ -12,6 +12,8 @@ WIDTH = 1200
 
 FONT = pygame.font.SysFont('Verdana', 40)
 
+txt = "Game over!"
+
 COLOR_WHITE = (255, 255, 255)
 COLOR_BLACK = (0, 0, 0)
 COLOR_BLUE = (0, 0, 255)
